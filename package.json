@@ -1,0 +1,14 @@
+{
+  "name": "shipment-document-search",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=22.18"},
+  "scripts": {
+    "start": "node --env-file=.env src/shipment_service.ts",
+    "test": "node --test test/delivery_decision.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {"openai": "^6.0.0", "zod": "^3.24.0"},
+  "devDependencies": {"@types/node": "^22.0.0", "typescript": "^5.8.0"}
+}

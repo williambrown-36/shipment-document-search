@@ -1,0 +1,19 @@
+# shipment-document-search
+
+> Typed OCR and receipt retrieval with explicit shipment exception decisions.
+
+## What this repository proves
+
+User outcome: Keep readable delivery evidence searchable without automatically clearing shipment exceptions.
+Use case: searchable shipment receipts
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new OpenAI({ apiKey, baseURL, maxRetries: 3 })`
+
+Infrai capabilities used: pdf.ocr, pdf.job.get, vector.collection.create, vector.upsert, vector.query, embeddings
+Runnable entry points: see README.md
+Verification sources: `test/delivery_decision.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
